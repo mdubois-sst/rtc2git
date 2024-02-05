@@ -66,7 +66,7 @@ class WorkspaceHandler:
         self.load()
 
     def load(self):
-        command = "%s load -r %s %s --force" % (self.scmcommand, self.repo, self.workspace)
+        command = "%s load -r %s %s --force --allow" % (self.scmcommand, self.repo, self.workspace)
         if self.config.includecomponentroots:
             command += " --include-root"
         shouter.shout("Start (re)loading current workspace: " + command)

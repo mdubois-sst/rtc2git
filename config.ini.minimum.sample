@@ -1,12 +1,21 @@
 [General]
-Repo=https://rtc.mySite.com/ccm
-User=USR
-Password=secret
-GIT-Reponame = myGitRepo.git
-WorkspaceName=ToBeCreatedWorkspaceName
+Repo=https://rational02.seqos.local:9443/ccm
+User= *RTC User
+Password= *RTC Password
+# must end in.git
+GIT-Reponame = komainu.git
+# If this value is set to True, the workspace referred with workspacename will just be loaded instead of newly created
+useExistingWorkspace = False
+WorkspaceName=mdubois_test
 # Folder to be created - where migration will take place
-Directory = \temp\myWorkingDirectory
+Directory = \temp\komainu-maint-1_0_5
+RTCVersion = 7
 
 [Migration]
 # Stream to be migrated,  referenced by Name or UUID
-StreamToMigrate = MyDevelopmentStream
+StreamToMigrate = _YpqcEChLEeuuE_rfRupK0Q
+
+# Determines whether to prompt the user to accept change sets together to resolve accept errors.
+# False - The user is prompted
+# True - The user is not prompted
+UseAutomaticConflictResolution = True

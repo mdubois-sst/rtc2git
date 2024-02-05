@@ -24,9 +24,31 @@ This project is no longer in active development, because the author has no acces
 
 ## Usage
 
-- Create a config file called `config.ini` and fill out the needed information, use the supplied `config.ini.sample` or `config.ini.minimum.sample` as reference
+- Create a config file called `config.ini` and fill out the needed information, use the supplied `config.ini.minimum.sample` as reference. `config.ini.sample` has all of the valid config commands
 - Execute `migration.py`
+- This will produce two folders in your `Directory` folder as specified in the config file
+-- a folder with the name specified in `GIT-Reponame`
+-- a folder with the name specified in `GIT-Reponame` minus .git
+- The .git folder contains the git repo information and the minus .git folder contains the code result from the merge
 
+### How to push to remote git repo
+
+There might be a better way to do this but this is how I did it
+
+- If you have an empty repo and are trying to add a master branch:
+-- CD into the .git directory (e.g if your GIT-Reponame is komainu.git, CD into the komainu.git directory)
+-- execute `git remote add origin <git repo url>` (eg. `git remote add origin https://github.com/SeaStreetTechnologies/com.seastreet.stratos.package.komainu.git` )
+-- execute `git branch -M main`
+-- execute `git push -u origin main`
+
+- If you have an existing repo with a master branch and want to add a branch (eg. for a maintenance branch)
+-- CD into the sans .git directory (e.g if your GIT-Reponame is komainu.git, CD into the komainu directory)
+-- execute `git checkout master`
+-- execute `git checkout -b <branch name>` (e.g `git checkout -b maint-1.0.5`)
+-- execute `git push origin <branch name>`
+-- CD into the .git directory
+-- execute `git remote add origin <git repo url>` (eg,`git remote add origin https://github.com/SeaStreetTechnologies/com.seastreet.stratos.package.komainu.git`)
+-- execute `git push origin <branch name>`
 
 ### Pitfalls
 - Your stream or workspace is not allowed to have spaces in their name. In the case where names contain spaces, please clone and rename them and use the cloned workspace/stream for migration (see [#104](https://github.com/rtcTo/rtc2git/issues/104), [#51](https://github.com/rtcTo/rtc2git/issues/51)).
