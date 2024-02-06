@@ -3,12 +3,12 @@ Repo=https://rational02.seqos.local:9443/ccm
 User= *RTC User
 Password= *RTC Password
 # must end in.git
-GIT-Reponame = komainu.git
+GIT-Reponame = reponame.git
 # If this value is set to True, the workspace referred with workspacename will just be loaded instead of newly created
 useExistingWorkspace = False
 WorkspaceName=mdubois_test
 # Folder to be created - where migration will take place
-Directory = \temp\komainu-maint-1_0_5
+Directory = \temp\migrate
 RTCVersion = 7
 
 [Migration]
