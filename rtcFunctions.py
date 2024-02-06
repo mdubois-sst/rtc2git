@@ -308,6 +308,8 @@ class ImportHandler:
         shouter.shout("Last executed command: \n" + Changes.latest_accept_command)
         shouter.shout("Appropriate git commit command \n" + Commiter.getcommitcommand(change))
         reallycontinue = "Do you want to continue? Y for continue, any key for abort"
+        return True
+
         if input(reallycontinue).lower() == "y":
             return True
         else:

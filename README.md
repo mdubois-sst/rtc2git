@@ -43,7 +43,6 @@ There might be a better way to do this but this is how I did it
 
 - If you have an existing repo with a master branch and want to add a branch (eg. for a maintenance branch)
 -- CD into the sans .git directory (e.g if your GIT-Reponame is komainu.git, CD into the komainu directory)
--- execute `git checkout master`
 -- execute `git checkout -b <branch name>` (e.g `git checkout -b maint-1.0.5`)
 -- execute `git push origin <branch name>`
 -- CD into the .git directory
