@@ -13,7 +13,7 @@ RTCVersion = 7
 
 [Migration]
 # Stream to be migrated,  referenced by Name or UUID
-StreamToMigrate = _YpqcEChLEeuuE_rfRupK0Q
+StreamToMigrate = 
 
 # Determines whether to prompt the user to accept change sets together to resolve accept errors.
 # False - The user is prompted
