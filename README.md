@@ -36,17 +36,17 @@ This project is no longer in active development, because the author has no acces
 There might be a better way to do this but this is how I did it
 
 - If you have an empty repo and are trying to add a master branch:
--- CD into the .git directory (e.g if your GIT-Reponame is komainu.git, CD into the komainu.git directory)
--- execute `git remote add origin <git repo url>` (eg. `git remote add origin https://github.com/SeaStreetTechnologies/com.seastreet.stratos.package.komainu.git` )
+-- CD into the .git directory (e.g if your GIT-Reponame is foobar.git, CD into the foobar.git directory)
+-- execute `git remote add origin <git repo url>` (eg. `git remote add origin https://github.com/<repo>` )
 -- execute `git branch -M main`
 -- execute `git push -u origin main`
 
 - If you have an existing repo with a master branch and want to add a branch (eg. for a maintenance branch)
--- CD into the sans .git directory (e.g if your GIT-Reponame is komainu.git, CD into the komainu directory)
--- execute `git checkout -b <branch name>` (e.g `git checkout -b maint-1.0.5`)
+-- CD into the sans .git directory (e.g if your GIT-Reponame is foobar.git, CD into the foobar directory)
+-- execute `git checkout -b <branch name>`
 -- execute `git push origin <branch name>`
 -- CD into the .git directory
--- execute `git remote add origin <git repo url>` (eg,`git remote add origin https://github.com/SeaStreetTechnologies/com.seastreet.stratos.package.komainu.git`)
+-- execute `git remote add origin <git repo url>` (eg,`git remote add origin https://github.com/<repo>`)
 -- execute `git push origin <branch name>`
 
 ### Pitfalls
